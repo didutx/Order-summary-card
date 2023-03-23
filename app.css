@@ -1,0 +1,222 @@
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-color: var(--Pale-blue);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.092) 3px 3px 5px;
+    border-radius: 1rem;
+    width: 400px;
+    height: 600px;
+    background: white;
+}
+
+.card-container {
+    height: inherit;
+    width: 400px;
+}
+
+.image-container img {
+    width: 400px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-body {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.card-body .title h1 {
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--Dark-blue);
+}
+
+.info {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--Desaturated-blue);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 3.25rem 0 3.25rem
+}
+
+.plan-container {
+    display: flex;
+    flex-direction: row;
+    width: 325px;
+    padding: 1rem;
+    background-color: var(--Very-pale-blue);
+    border-radius: 0.7rem;
+    gap: 1rem;
+}
+
+.plan-container .left-side {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.plan-container .left-side .avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+}
+
+.left-side p {
+    color: var(--Desaturated-blue);
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.left-side span {
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+.text-payment {
+    display: flex;
+    justify-content: end;
+}
+
+.right-side {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.right-side button {
+    border: none;
+    background-color: var(--Very-pale-blue);
+    text-decoration: underline;
+    color: var(--Bright-blue);
+    font-weight: 700;
+}
+
+.right-side button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    padding: 0.8rem;
+    background-color: var(--Bright-blue);
+    border-radius: 0.7rem;
+    gap: 1rem;
+    box-shadow: 5px 15px 20px 0px rgba(0, 0, 255, .2);
+}
+
+.payment button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    background-color: inherit;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.payment:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.cancel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 325px;
+    padding: 0.8rem;
+}
+
+.cancel button {
+    border: none;
+    color: var(--Desaturated-blue);
+    background-color: white;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.cancel button:hover {
+    cursor: pointer;
+    color: var(--Dark-blue);
+}
+
+@media screen and (max-width:425px) {
+
+    .card,
+    .card-container,
+    .image-container,
+    .img img,
+    .card-body {
+        width: 325px;
+    }
+
+    .card,
+    .card-container {
+        height: 575px;
+    }
+
+    .info {
+        padding: 0 1.5rem 0 1.5rem;
+        line-height: 25px;
+    }
+
+    .plan-container {
+
+        width: 276px;
+    }
+
+    .plan-container .left-side {
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .payment {
+        width: 276px;
+    }
+}
